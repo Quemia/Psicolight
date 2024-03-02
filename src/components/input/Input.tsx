@@ -1,10 +1,10 @@
 import React from "react";
-import { MiddleButton } from "./button.style";
 
 export type InputProps = {
   InpuType: string;
   rounded: boolean;
   placeholder: string;
+  type: string;
 };
 
 const Input: React.FC<InputProps> = ({
@@ -17,7 +17,17 @@ const Input: React.FC<InputProps> = ({
     rounded,
     placeholder,
   };
-  return <Input {...inputProps} placeholder="Enter your email adress..." />;
+  switch (InpuType) {
+    case "form": {
+      return (
+        <Input
+          {...inputProps}
+          type="text"
+          placeholder="Enter your email adress..."
+        />
+      );
+    }
+  }
 };
 
 export { Input };
