@@ -10,7 +10,7 @@ const Login = () => {
     <div className="LoginContainer">
       <div className="LoginBox">
         <div className="LoginHeader">Login</div>
-        <div className="Inputs">
+        <div className="Input">
           <input className="email" placeholder="Nome de usuário ou e-mail" />
           <Input
             InpuType="form"
@@ -25,7 +25,7 @@ const Login = () => {
             size="middle"
             disabled={false}
             outline={false}
-            onClick={handleSubmit}
+            // onClick={handleSubmit}
             text="Entrar"
           />
         </div>

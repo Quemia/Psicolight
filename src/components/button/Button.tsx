@@ -6,21 +6,21 @@ export type ButtonProps = {
   text: string;
   outline: boolean;
   disabled: boolean;
-  onClick: (e: any) => void;
+  // onClick: (e: any) => void;
 };
 
 const Button: React.FC<ButtonProps> = ({
   size = "middle",
   disabled = false,
   outline = false,
-  onClick,
+  // onClick,
   text,
 }) => {
   const buttonProps = {
     size,
     disabled,
     outline,
-    onClick,
+    // onClick,
   };
 
   switch (size) {
