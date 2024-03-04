@@ -18,12 +18,21 @@ const Input: React.FC<InputProps> = ({
     placeholder,
   };
   switch (InpuType) {
-    case "form": {
+    case "email": {
       return (
         <Input
           {...inputProps}
           type="text"
-          placeholder="Enter your email adress..."
+          placeholder="Nome de usuário ou e-mail"
+        />
+      );
+    }
+    case "password": {
+      return (
+        <Input
+          {...inputProps}
+          type="password"
+          placeholder="Senha"
         />
       );
     }

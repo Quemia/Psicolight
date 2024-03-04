@@ -1,5 +1,12 @@
 import React from "react";
-import { MiddleButton, SmallButton, LargueButton } from "./button.style";
+import {
+  MiddleButton,
+  SmallButton,
+  LargueButton,
+  TransparentButtonLarge,
+  TransparentButtonMiddle,
+  TransparentButtonSmall,
+} from "./button.style";
 
 export type ButtonProps = {
   size: string;
@@ -30,6 +37,30 @@ const Button: React.FC<ButtonProps> = ({
     }
 
     case "largue": {
+      return <LargueButton {...buttonProps}>{text}</LargueButton>;
+    }
+
+    case "largueTransparent": {
+      return (
+        <TransparentButtonLarge {...buttonProps}>{text}</TransparentButtonLarge>
+      );
+    }
+
+    case "middleTransparent": {
+      return (
+        <TransparentButtonMiddle {...buttonProps}>
+          {text}
+        </TransparentButtonMiddle>
+      );
+    }
+
+    case "smallTransparent": {
+      return (
+        <TransparentButtonSmall {...buttonProps}>{text}</TransparentButtonSmall>
+      );
+    }
+
+    default: {
       return <LargueButton {...buttonProps}>{text}</LargueButton>;
     }
   }

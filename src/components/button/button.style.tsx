@@ -80,3 +80,37 @@ export const LargueButton = styled(StyledButton)`
     color: #fff;
   }
 `;
+
+////////////////
+
+export const TransparentButtonLarge = styled.button<StyledButtonProps>`
+  color: #315ce0;
+  background-color: transparent;
+  font: normal 400 16px/140% "Ubuntu", sans-serif;
+  width: 221px;
+  height: 24px;
+  border: transparent;
+
+  opacity: ${(props) => {
+    return props.disabled ? ".65" : "1";
+  }};
+
+  &:active {
+    box-shadow: inset 0 3px 5px rgb(39 44 51 / 13%);
+  }
+`;
+
+export const TransparentButtonMiddle = styled(TransparentButtonLarge)`
+  /* color: #315ce0; */
+  /* background-color: transparent; */
+  font: normal 400 14px/140% "Ubuntu", sans-serif;
+  width: 80px;
+  height: 24px;
+  /* border: transparent; */
+`;
+
+export const TransparentButtonSmall = styled(TransparentButtonLarge)`
+  font: normal 400 12px/140% "Ubuntu", sans-serif;
+  width: 38px;
+  height: 24px;
+`;

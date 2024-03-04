@@ -33,4 +33,3 @@ export const Largue: Story = {
     text: "Vamos lá!",
   },
 };
-
