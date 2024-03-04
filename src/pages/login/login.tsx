@@ -3,9 +3,6 @@ import Button from "../../components/button/Button";
 import Input from "../../components/input/Input";
 
 const Login = () => {
-  const handleSubmit = () => {
-    alert("click");
-  };
   return (
     <div className="LoginContainer">
       <div className="LoginBox">
@@ -24,8 +21,7 @@ const Login = () => {
           <Button
             size="middle"
             disabled={false}
-            outline={false}
-            // onClick={handleSubmit}
+            borderColor={false}
             text="Entrar"
           />
         </div>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export type StyledButtonProps = {
-  outline: boolean;
+  borderColor: boolean;
 };
 
 export const StyledButton = styled.button<StyledButtonProps>`
@@ -11,9 +11,12 @@ export const StyledButton = styled.button<StyledButtonProps>`
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px solid transparent;
   padding: 0.5rem 1rem;
   cursor: pointer;
+
+  border: ${(props) => {
+    return props.borderColor ? "solid 1px #000" : "transparent";
+  }};
 
   opacity: ${(props) => {
     return props.disabled ? ".65" : "1";
@@ -27,23 +30,53 @@ export const StyledButton = styled.button<StyledButtonProps>`
 export const MiddleButton = styled(StyledButton)`
   color: #fff;
   background-color: #315ce0;
-  font: normal bold 14px/140% "Ubuntu", "sans-serif";
+  font: normal 700 14px/140% "Ubuntu", sans-serif;
+  width: 138px;
+  height: 48px;
+  border-radius: 500px;
 
   &:hover {
     background-color: #2c52c9;
-    /* border-color: ##3154CD; */
   }
-
-  /* &:focus {
-    background-color: #ececec;
-    border-color: #e6e6e6;
-    box-shadow: inset 0 1px 0 hsl(0deg 0% 100% / 15%),
-      0 1px 1px rgb(39 44 51 / 8%), 0 0 0 1px rgb(222 222 223 / 50%);
-  } */
 
   &:active {
     background-color: #456ce3;
-    /* border-color: #dfdfdf; */
+    color: #fff;
+  }
+`;
+
+export const SmallButton = styled(StyledButton)`
+  color: #fff;
+  background-color: #315ce0;
+  font: normal 700 14px/140% "Ubuntu", sans-serif;
+  width: 68px;
+  height: 48px;
+  border-radius: 500px;
+
+  &:hover {
+    background-color: #2c52c9;
+  }
+
+  &:active {
+    background-color: #456ce3;
+    color: #fff;
+  }
+`;
+
+export const LargueButton = styled(StyledButton)`
+  color: #fff;
+  background-color: #315ce0;
+  font: normal 700 18px/140% "Ubuntu", sans-serif;
+  width: 327px;
+  height: 56px;
+  border-radius: 500px;
+
+  &:hover {
+    background-color: #2c52c9;
+  }
+
+  &:active {
+    background-color: #456ce3;
     color: #fff;
   }
 `;

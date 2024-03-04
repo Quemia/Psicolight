@@ -1,16 +1,14 @@
-import React from "react";
 import type { StoryObj, Meta } from "@storybook/react";
 
-import Button, { ButtonProps } from "../../components/button/Button";
-
-const meta: Meta<typeof Button> = {
-  component: Button,
-};
+import Button from "../../components/button/Button";
 
 export default {
   component: Button,
   title: "Components/Button/Default",
-  argTypes: { onClick: { action: "cliked " } },
+
+  parameters: {
+    layout: "centered",
+  },
 } as Meta;
 
 type Story = StoryObj<typeof Button>;
@@ -18,6 +16,21 @@ type Story = StoryObj<typeof Button>;
 export const Middle: Story = {
   args: {
     size: "middle",
-    text: "Button",
+    text: "Começar! >",
   },
 };
+
+export const Small: Story = {
+  args: {
+    size: "small",
+    text: ">",
+  },
+};
+
+export const Largue: Story = {
+  args: {
+    size: "largue",
+    text: "Vamos lá!",
+  },
+};
+

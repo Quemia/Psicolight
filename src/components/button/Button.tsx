@@ -1,39 +1,36 @@
 import React from "react";
-import { MiddleButton } from "./button.style";
+import { MiddleButton, SmallButton, LargueButton } from "./button.style";
 
 export type ButtonProps = {
   size: string;
   text: string;
-  outline: boolean;
+  borderColor: boolean;
   disabled: boolean;
-  // onClick: (e: any) => void;
 };
 
 const Button: React.FC<ButtonProps> = ({
   size = "middle",
   disabled = false,
-  outline = false,
-  // onClick,
+  borderColor = false,
   text,
 }) => {
   const buttonProps = {
     size,
+    borderColor,
     disabled,
-    outline,
-    // onClick,
   };
 
   switch (size) {
     case "small": {
-      return <button>small</button>;
+      return <SmallButton {...buttonProps}>{text}</SmallButton>;
     }
 
     case "middle": {
       return <MiddleButton {...buttonProps}>{text}</MiddleButton>;
     }
 
-    case "big": {
-      return <button>small</button>;
+    case "largue": {
+      return <LargueButton {...buttonProps}>{text}</LargueButton>;
     }
   }
 };
