@@ -20,6 +20,8 @@ export const StyledInput = styled.input<StyledInputProps>`
   color: #9498a4;
   font: normal 400 14px/140% "Ubuntu", sans-serif;
 
+  width: 90%;
+
   opacity: ${(props) => {
     return props.disabled ? ".65" : "1";
   }};
