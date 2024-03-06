@@ -2,7 +2,6 @@ import type { StoryObj, Meta } from "@storybook/react";
 
 import Input from "../../components/input/Input";
 
-
 export default {
   component: Input,
   title: "Components/Input/Default",
@@ -14,10 +13,14 @@ export default {
 
 type Story = StoryObj<typeof Input>;
 
-export const Middle: Story = {
+export const EmailInput: Story = {
   args: {
     InpuType: "email",
-    placeholder: "Nome de usuário ou e-mail",
   },
 };
 
+export const PasswordInput: Story = {
+  args: {
+    InpuType: "password",
+  },
+};

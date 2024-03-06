@@ -4,7 +4,7 @@ export type StyledInputProps = {
   rounded: boolean;
 };
 
-export const StyledInput = styled.button<StyledInputProps>`
+export const StyledInput = styled.input<StyledInputProps>`
   background-color: transparent;
   color: #fff;
   display: inline-flex;
@@ -13,13 +13,20 @@ export const StyledInput = styled.button<StyledInputProps>`
   text-align: center;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  border-bottom: solid 1px #ACAFB8 ;
+  border: transparent;
+  border-bottom: solid 1px #acafb8;
+
+  text-align: left;
+  color: #9498a4;
+  font: normal 400 14px/140% "Ubuntu", sans-serif;
 
   opacity: ${(props) => {
     return props.disabled ? ".65" : "1";
   }};
 
-  &:active {
-    box-shadow: inset 0 3px 5px rgb(39 44 51 / 13%);
+
+  &:focus-visible {
+    outline: transparent;
+    border-bottom: 2px #315ce0 solid;
   }
 `;

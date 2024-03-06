@@ -1,10 +1,10 @@
 import React from "react";
+import { StyledInput } from "./input.style";
 
 export type InputProps = {
   InpuType: string;
   rounded: boolean;
   placeholder: string;
-  type: string;
 };
 
 const Input: React.FC<InputProps> = ({
@@ -20,19 +20,16 @@ const Input: React.FC<InputProps> = ({
   switch (InpuType) {
     case "email": {
       return (
-        <Input
+        <StyledInput
           {...inputProps}
           type="text"
+          placeholder="Nome de usuário ou e-mail"
         />
       );
     }
     case "password": {
       return (
-        <Input
-          {...inputProps}
-          type="password"
-          placeholder="Senha"
-        />
+        <StyledInput {...inputProps} type="password" placeholder="Senha" />
       );
     }
   }
