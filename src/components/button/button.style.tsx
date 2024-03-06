@@ -101,16 +101,13 @@ export const TransparentButtonLarge = styled.button<StyledButtonProps>`
 `;
 
 export const TransparentButtonMiddle = styled(TransparentButtonLarge)`
-  /* color: #315ce0; */
-  /* background-color: transparent; */
   font: normal 400 14px/140% "Ubuntu", sans-serif;
   width: 80px;
   height: 24px;
-  /* border: transparent; */
 `;
 
 export const TransparentButtonSmall = styled(TransparentButtonLarge)`
   font: normal 400 12px/140% "Ubuntu", sans-serif;
-  width: 38px;
+  width: 90px;
   height: 24px;
 `;

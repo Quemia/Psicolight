@@ -10,10 +10,10 @@ const Login = () => {
         <div className="Input">
           <input className="email" placeholder="Nome de usuário ou e-mail" />
           <Input
-            InpuType="form"
+            InpuType="email"
             rounded={false}
             type="text"
-            placeholder="Enter your email adress..."
+            placeholder="Nome de usuário ou e-mail"
           />
           <input className="password" placeholder="Senha" />
         </div>

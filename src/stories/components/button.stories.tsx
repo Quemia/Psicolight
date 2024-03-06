@@ -33,3 +33,24 @@ export const Largue: Story = {
     text: "Vamos lá!",
   },
 };
+
+export const LargueT: Story = {
+  args: {
+    size: "largueTransparent",
+    text: "Entrar com o Facebook",
+  },
+};
+
+export const MiddleT: Story = {
+  args: {
+    size: "middleTransparent",
+    text: "Pular",
+  },
+};
+
+export const SmallT: Story = {
+  args: {
+    size: "smallTransparent",
+    text: "Cadastre-se",
+  },
+};

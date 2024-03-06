@@ -8,7 +8,7 @@ export type InputProps = {
 };
 
 const Input: React.FC<InputProps> = ({
-  InpuType = "form",
+  InpuType = "email",
   rounded = false,
   placeholder,
 }) => {
@@ -23,7 +23,6 @@ const Input: React.FC<InputProps> = ({
         <Input
           {...inputProps}
           type="text"
-          placeholder="Nome de usuário ou e-mail"
         />
       );
     }
