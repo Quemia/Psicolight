@@ -40,6 +40,6 @@ export const ButtonForm = styled.div`
 `;
 
 export const ButtonSubmit = styled.div`
-  width: 80%;
+  width: 100%;
   /* margin: 1px 24px 16px 24px; */
 `;
