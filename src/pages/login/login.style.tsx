@@ -6,6 +6,7 @@ export const LoginContainer = styled.div`
 
   background-color: #fafafa;
   display: block;
+  color: #000;
 `;
 
 export const LoginBox = styled.div`
@@ -41,4 +42,9 @@ export const ButtonForm = styled.div`
 
 export const ButtonSubmit = styled.div`
   width: 100%;
+`;
+
+export const IconFacebook = styled.i`
+  font-size: 24px;
+  color: #315ce0;
 `;
