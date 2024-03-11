@@ -14,7 +14,11 @@ export const LoginBox = styled.div`
   height: 390px;
   margin: 0 auto;
 
-  padding: 123px 24px 299px 24px;
+  padding: 123px 24px 52px 24px;
+  box-shadow: 0 -3px 10px #6c7a8d;
+  /* border-radius: 21px; */
+  border-bottom-right-radius: 21px;
+  border-bottom-left-radius: 21px;
 
   text-align: center;
 `;
@@ -47,4 +51,25 @@ export const ButtonSubmit = styled.div`
 export const IconFacebook = styled.i`
   font-size: 24px;
   color: #315ce0;
+`;
+
+export const LineHr = styled.hr`
+  margin: 24px auto;
+  border: 0;
+  border-top: 1px solid #dcdde0;
+  height: 1px;
+  overflow: visible;
+  padding: 0;
+  color: #2a3b58;
+  text-align: center;
+
+  &:after {
+    content: "ou";
+    display: inline-block;
+    position: relative;
+    top: -1em;
+    font-size: 14px;
+    background: #fff;
+    padding: 1px 5px;
+  }
 `;
