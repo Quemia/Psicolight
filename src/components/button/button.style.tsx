@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export type StyledButtonProps = {
   borderColor: boolean;
+  disabled: boolean;
 };
 
 export const StyledButton = styled.button<StyledButtonProps>`
@@ -59,6 +60,10 @@ export const TransparentButtonLarge = styled.button<StyledButtonProps>`
   height: 24px;
   border: transparent;
 
+  border: ${(props) => {
+    return props.borderColor ? "solid 1px #000" : "transparent";
+  }};
+
   opacity: ${(props) => {
     return props.disabled ? ".65" : "1";
   }};
@@ -71,9 +76,19 @@ export const TransparentButtonLarge = styled.button<StyledButtonProps>`
 export const TransparentButtonMiddle = styled(TransparentButtonLarge)`
   font: normal 400 14px/140% "Ubuntu", sans-serif;
   width: max-content;
+  border: transparent;
+
+  &:active {
+    box-shadow: inset 0 3px 5px rgb(39 44 51 / 13%);
+  }
 `;
 
 export const TransparentButtonSmall = styled(TransparentButtonLarge)`
   font: normal 400 12px/140% "Ubuntu", sans-serif;
   width: max-content;
+  border: transparent;
+
+  &:focus-visible {
+    outline: transparent;
+  }
 `;

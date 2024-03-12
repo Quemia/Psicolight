@@ -10,6 +10,10 @@ import {
   ButtonSubmit,
   IconFacebook,
   LineHr,
+  FinalLine,
+  SubmitBox,
+  SubmitText,
+  SubmitFacebook,
 } from "./login.style";
 
 const Login = () => {
@@ -44,7 +48,7 @@ const Login = () => {
           />
         </ButtonSubmit>
         <LineHr />
-        <div>
+        <SubmitFacebook>
           <IconFacebook>
             <FaFacebook />
           </IconFacebook>
@@ -54,9 +58,18 @@ const Login = () => {
             borderColor={false}
             text="Entrar com o Facebook"
           />
-        </div>
+        </SubmitFacebook>
       </LoginBox>
-      <div></div>
+      <FinalLine />
+      <SubmitBox>
+        <SubmitText>Não tem uma conta?</SubmitText>
+        <Button
+          size="smallTransparent"
+          disabled={false}
+          borderColor={false}
+          text="Cadastre-se."
+        />
+      </SubmitBox>
     </LoginContainer>
   );
 };
