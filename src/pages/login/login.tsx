@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Button from "../../components/button/Button";
 import { FaFacebook } from "react-icons/fa";
 import Input from "../../components/input/Input";
@@ -17,6 +18,8 @@ import {
 } from "./login.style";
 
 const Login = () => {
+  const [email, setEmail] = useState<string>("");
+
   return (
     <LoginContainer>
       <LoginBox>
@@ -24,12 +27,19 @@ const Login = () => {
         <InputForm>
           <Input
             InpuType="email"
-            rounded={false}
+            // rounded={false}
             placeholder="Nome de usuário ou e-mail"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </InputForm>
         <InputForm>
-          <Input InpuType="password" rounded={false} placeholder="Senha" />
+          <Input
+            InpuType="password"
+            // value={.password}
+            rounded={false}
+            placeholder="Senha"
+          />
         </InputForm>
         <ButtonForm>
           <Button
