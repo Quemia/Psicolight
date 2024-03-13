@@ -27,7 +27,6 @@ const Login = () => {
         <InputForm>
           <Input
             InpuType="email"
-            // rounded={false}
             placeholder="Nome de usuário ou e-mail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -36,7 +35,6 @@ const Login = () => {
         <InputForm>
           <Input
             InpuType="password"
-            // value={.password}
             rounded={false}
             placeholder="Senha"
           />
