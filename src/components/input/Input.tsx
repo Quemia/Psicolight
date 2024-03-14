@@ -1,21 +1,22 @@
-import React from "react";
+import React, { InputHTMLAttributes } from "react";
 import { StyledInput } from "./input.style";
 
-export type InputProps = {
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  value: string;
   InpuType: string;
-  rounded: boolean;
   placeholder: string;
-};
+  disabled: boolean;
+}
 
 const Input: React.FC<InputProps> = ({
   InpuType = "email",
-  rounded = false,
   placeholder,
+  disabled = false,
 }) => {
   const inputProps = {
     InpuType,
-    rounded,
     placeholder,
+    disabled,
   };
   switch (InpuType) {
     case "email": {
@@ -29,7 +30,12 @@ const Input: React.FC<InputProps> = ({
     }
     case "password": {
       return (
-        <StyledInput {...inputProps} type="password" placeholder="Senha" />
+        <StyledInput
+          {...inputProps}
+          type="password"
+          placeholder="Senha"
+          value={undefined}
+        />
       );
     }
   }

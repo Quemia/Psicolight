@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export type StyledInputProps = {
-  rounded: boolean;
+  disabled: boolean;
 };
 
 export const StyledInput = styled.input<StyledInputProps>`
@@ -25,7 +25,6 @@ export const StyledInput = styled.input<StyledInputProps>`
   opacity: ${(props) => {
     return props.disabled ? ".65" : "1";
   }};
-
 
   &:focus-visible {
     outline: transparent;

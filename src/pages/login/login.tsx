@@ -17,8 +17,13 @@ import {
   SubmitFacebook,
 } from "./login.style";
 
-const Login = () => {
+const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+
+  const handleChange = () => {
+    console.log("email", email);
+  };
 
   return (
     <LoginContainer>
@@ -28,6 +33,7 @@ const Login = () => {
           <Input
             InpuType="email"
             placeholder="Nome de usuário ou e-mail"
+            disabled={false}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -35,8 +41,10 @@ const Login = () => {
         <InputForm>
           <Input
             InpuType="password"
-            rounded={false}
+            disabled={false}
             placeholder="Senha"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </InputForm>
         <ButtonForm>
@@ -76,6 +84,7 @@ const Login = () => {
           disabled={false}
           borderColor={false}
           text="Cadastre-se."
+          onClick={handleChange()}
         />
       </SubmitBox>
     </LoginContainer>
