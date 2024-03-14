@@ -2,7 +2,6 @@ import React, { InputHTMLAttributes } from "react";
 import { StyledInput } from "./input.style";
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  value: string;
   InpuType: string;
   placeholder: string;
   disabled: boolean;
@@ -30,12 +29,7 @@ const Input: React.FC<InputProps> = ({
     }
     case "password": {
       return (
-        <StyledInput
-          {...inputProps}
-          type="password"
-          placeholder="Senha"
-          value={undefined}
-        />
+        <StyledInput {...inputProps} type="password" placeholder="Senha" />
       );
     }
   }

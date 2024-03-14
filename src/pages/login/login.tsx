@@ -21,10 +21,6 @@ const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const handleChange = () => {
-    console.log("email", email);
-  };
-
   return (
     <LoginContainer>
       <LoginBox>
@@ -37,6 +33,7 @@ const Login: React.FC = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+          <p>{email}</p>
         </InputForm>
         <InputForm>
           <Input
@@ -84,7 +81,6 @@ const Login: React.FC = () => {
           disabled={false}
           borderColor={false}
           text="Cadastre-se."
-          onClick={handleChange()}
         />
       </SubmitBox>
     </LoginContainer>
