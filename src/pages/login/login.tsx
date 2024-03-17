@@ -23,7 +23,7 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState<string>("");
   const navigate = useNavigate();
 
-  const onSubmit = () => {
+  const handleSubmit = () => {
     console.log(email);
     console.log(password);
 
@@ -38,8 +38,12 @@ const Login: React.FC = () => {
     console.log("entrei facebook");
   };
 
+  const handleRegister = () => {
+    console.log("entrei Cadastro");
+  };
+
   return (
-    <LoginContainer onSubmit={() => onSubmit()}>
+    <LoginContainer>
       <LoginBox>
         <LoginHeader />
         <InputForm>
@@ -61,26 +65,24 @@ const Login: React.FC = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </InputForm>
-        <ButtonForm>
+        <ButtonForm onClick={handleNewPass}>
           <Button
             size="smallTransparent"
             disabled={false}
             borderColor={false}
             text="Esqueceu a senha?"
-            onClick={handleNewPass}
           />
         </ButtonForm>
-        <ButtonSubmit>
+        <ButtonSubmit onClick={handleSubmit}>
           <Button
             size="middle"
             disabled={false}
             borderColor={false}
             text="Entrar"
-            type="submit"
           />
         </ButtonSubmit>
         <LineHr />
-        <SubmitFacebook>
+        <SubmitFacebook onClick={handleFacebook}>
           <IconFacebook>
             <FaFacebook />
           </IconFacebook>
@@ -89,12 +91,11 @@ const Login: React.FC = () => {
             disabled={false}
             borderColor={false}
             text="Entrar com o Facebook"
-            onClick={handleFacebook}
           />
         </SubmitFacebook>
       </LoginBox>
       <FinalLine />
-      <SubmitBox>
+      <SubmitBox onClick={handleRegister}>
         <SubmitText>Não tem uma conta?</SubmitText>
         <Button
           size="smallTransparent"
