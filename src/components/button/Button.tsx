@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import {
   MiddleButton,
   SmallButton,
@@ -8,12 +8,12 @@ import {
   TransparentButtonSmall,
 } from "./button.style";
 
-export type ButtonProps = {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size: string;
   text: string;
   borderColor: boolean;
   disabled: boolean;
-};
+}
 
 const Button: React.FC<ButtonProps> = ({
   size = "middle",

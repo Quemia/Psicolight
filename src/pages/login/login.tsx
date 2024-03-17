@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/button/Button";
 import { FaFacebook } from "react-icons/fa";
 import Input from "../../components/input/Input";
@@ -20,9 +21,25 @@ import {
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const navigate = useNavigate();
+
+  const onSubmit = () => {
+    console.log(email);
+    console.log(password);
+
+    navigate("/home");
+  };
+
+  const handleNewPass = () => {
+    console.log("entrei new senha");
+  };
+
+  const handleFacebook = () => {
+    console.log("entrei facebook");
+  };
 
   return (
-    <LoginContainer>
+    <LoginContainer onSubmit={() => onSubmit()}>
       <LoginBox>
         <LoginHeader />
         <InputForm>
@@ -50,6 +67,7 @@ const Login: React.FC = () => {
             disabled={false}
             borderColor={false}
             text="Esqueceu a senha?"
+            onClick={handleNewPass}
           />
         </ButtonForm>
         <ButtonSubmit>
@@ -58,6 +76,7 @@ const Login: React.FC = () => {
             disabled={false}
             borderColor={false}
             text="Entrar"
+            type="submit"
           />
         </ButtonSubmit>
         <LineHr />
@@ -70,6 +89,7 @@ const Login: React.FC = () => {
             disabled={false}
             borderColor={false}
             text="Entrar com o Facebook"
+            onClick={handleFacebook}
           />
         </SubmitFacebook>
       </LoginBox>
