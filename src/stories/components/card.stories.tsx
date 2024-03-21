@@ -4,7 +4,7 @@ import Card from "../../components/cards/card";
 
 export default {
   component: Card,
-  title: "Components/Button/Default",
+  title: "Components/Card/Default",
 
   parameters: {
     layout: "centered",

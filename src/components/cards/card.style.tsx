@@ -24,7 +24,18 @@ export const BoxTask = styled.div`
 
   background-color: #f1f2ff;
   color: #315ce0;
+
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 `;
+
+export const BoxTaskText = styled.h3`
+  font: normal 600 12px/140% "Ubuntu", system-ui;
+  margin-left:4px;
+`;
+
 
 export const CardBoxEvolution = styled.div`
   display: block;

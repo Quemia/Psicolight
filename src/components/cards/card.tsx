@@ -1,5 +1,12 @@
 import React from "react";
-import { CardContainer, CardBoxText, CardBoxEvolution } from "./card.style";
+import { FiBookmark } from "react-icons/fi";
+import {
+  CardContainer,
+  CardBoxText,
+  CardBoxEvolution,
+  BoxTask,
+  BoxTaskText,
+} from "./card.style";
 
 export interface CardProps {
   task: string;
@@ -15,9 +22,10 @@ const Card: React.FC<CardProps> = ({
   return (
     <CardContainer>
       <CardBoxText>
-        <div>
-          <p>{task}</p>
-        </div>
+        <BoxTask>
+          <FiBookmark />
+          <BoxTaskText>{task}</BoxTaskText>
+        </BoxTask>
         <h3>{title}</h3>
         <p>{time}</p>
       </CardBoxText>
