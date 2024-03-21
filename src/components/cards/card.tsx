@@ -1,22 +1,30 @@
 import React from "react";
+import { CardContainer, CardBoxText, CardBoxEvolution } from "./card.style";
 
-const Card = () => {
+export interface CardProps {
+  task: string;
+  title: string;
+  time: string;
+}
+
+const Card: React.FC<CardProps> = ({
+  task = "Leitura",
+  title = "O Milagre do Amanhã",
+  time = "30 min durante 15 dias",
+}) => {
   return (
-    <>
-      <div>tarefas diárias</div>
-      <div className="card">
+    <CardContainer>
+      <CardBoxText>
         <div>
-          <div>
-            <p>Leitura</p>
-            <h3>O Milagre da manhã</h3>
-            <p>30min durante 15 dias</p>
-          </div>
-          <div>
-            <p>12%</p>
-          </div>
+          <p>{task}</p>
         </div>
-      </div>
-    </>
+        <h3>{title}</h3>
+        <p>{time}</p>
+      </CardBoxText>
+      <CardBoxEvolution>
+        <p>12%</p>
+      </CardBoxEvolution>
+    </CardContainer>
   );
 };
 
