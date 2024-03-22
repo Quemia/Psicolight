@@ -18,7 +18,7 @@ export const StyledInput = styled.input<StyledInputProps>`
 
   text-align: left;
   color: #9498a4;
-  font: normal 400 14px/140% "Ubuntu", sans-serif;
+  font: normal 400 14px/140% "Ubuntu", system-ui;
 
   width: 90%;
 
