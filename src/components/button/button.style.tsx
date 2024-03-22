@@ -38,16 +38,16 @@ export const StyledButton = styled.button<StyledButtonProps>`
 `;
 
 export const MiddleButton = styled(StyledButton)`
-  font: normal 700 14px/140% "Ubuntu", sans-serif;
+  font: normal 700 14px/140% "Ubuntu",system-ui;
 `;
 
 export const SmallButton = styled(StyledButton)`
-  font: normal 700 14px/140% "Ubuntu", sans-serif;
+  font: normal 700 14px/140% "Ubuntu",system-ui;
 `;
 
 export const LargueButton = styled(StyledButton)`
   background-color: #315ce0;
-  font: normal 700 18px/140% "Ubuntu", sans-serif;
+  font: normal 700 18px/140% "Ubuntu",system-ui;
 `;
 
 ////////////////
@@ -55,7 +55,7 @@ export const LargueButton = styled(StyledButton)`
 export const TransparentButtonLarge = styled.button<StyledButtonProps>`
   color: #315ce0;
   background-color: transparent;
-  font: normal 400 16px/140% "Ubuntu", sans-serif;
+  font: normal 400 16px/140% "Ubuntu",system-ui;
   width: 221px;
   height: 24px;
   border: transparent;
@@ -74,7 +74,7 @@ export const TransparentButtonLarge = styled.button<StyledButtonProps>`
 `;
 
 export const TransparentButtonMiddle = styled(TransparentButtonLarge)`
-  font: normal 400 14px/140% "Ubuntu", sans-serif;
+  font: normal 400 14px/140% "Ubuntu",system-ui;
   width: max-content;
   border: transparent;
 
@@ -84,7 +84,7 @@ export const TransparentButtonMiddle = styled(TransparentButtonLarge)`
 `;
 
 export const TransparentButtonSmall = styled(TransparentButtonLarge)`
-  font: normal 400 12px/140% "Ubuntu", sans-serif;
+  font: normal 400 12px/140% "Ubuntu",system-ui;
   width: max-content;
   border: transparent;
 
