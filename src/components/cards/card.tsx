@@ -6,6 +6,10 @@ import {
   CardBoxEvolution,
   BoxTask,
   BoxTaskText,
+  TaskTitle,
+  TaskTime,
+  BoxEvolution,
+  BoxEvolutionPercent,
 } from "./card.style";
 
 export interface CardProps {
@@ -16,7 +20,7 @@ export interface CardProps {
 
 const Card: React.FC<CardProps> = ({
   task = "Leitura",
-  title = "O Milagre do Amanhã",
+  title = "O Milagre da manhã",
   time = "30 min durante 15 dias",
 }) => {
   return (
@@ -26,11 +30,16 @@ const Card: React.FC<CardProps> = ({
           <FiBookmark />
           <BoxTaskText>{task}</BoxTaskText>
         </BoxTask>
-        <h3>{title}</h3>
-        <p>{time}</p>
+        <div>
+          <TaskTitle>{title}</TaskTitle>
+          <TaskTime>{time}</TaskTime>
+        </div>
       </CardBoxText>
       <CardBoxEvolution>
-        <p>12%</p>
+        <BoxEvolution>
+          <BoxEvolutionPercent />
+          12%
+        </BoxEvolution>
       </CardBoxEvolution>
     </CardContainer>
   );
