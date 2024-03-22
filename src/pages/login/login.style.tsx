@@ -89,7 +89,7 @@ export const SubmitBox = styled.div`
 `;
 
 export const SubmitText = styled.p`
-  font: normal 400 12px/140% "Ubuntu", sans-serif;
+  font: normal 400 12px/140% "Ubuntu", system-ui;
   color: #6a7385;
   margin-right: -10px;
 `;

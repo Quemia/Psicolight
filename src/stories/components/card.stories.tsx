@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Card>;
 export const CardStorie: Story = {
   args: {
     task: "Leitura",
-    title: "O Milagre do Amanhã",
+    title: "O Milagre da manhã",
     time: "30 min durante 15 dias",
   },
 };
